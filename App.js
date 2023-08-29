@@ -3,34 +3,24 @@ import { StyleSheet, Text, View } from 'react-native';
 import { ScrollView } from 'react-native-web';
 import Card from './components/Card';
 
+const Stack = createNativeStackNavigator();
+
 export default function App() {
-  return (
-    <ScrollView style= {{marginTop: 30}}> 
+    return (
     
-      <Card/>
+        <ScrollViwe style={{ marginTop: 50, margin: 8 }}>
+            <StatusBar></StatusBar>
+            <NavigationContainer>
+            <Stack.Navigator>
+            <Stack.Screen nome="Pagina1" component={Pagina1} />
+            <Stack.Screen nome="Pagina2" component={Pagina2} />
+            <Stack.Screen nome="Pagina3" component={Pagina3} />
+            </Stack.Navigator>
 
-    <View style= {styles.card}>
-      <Text style = {styles.titulo}>SALVE</Text>
-      <Text>Isso é um parágrafo</Text>
-      <Text style = {styles.paragrafo}>Isso é um parágrafo</Text>
-      <Text>Isso é um parágrafo</Text>
-      <StatusBar style="auto" />
-    </View>
+            </NavigationContainer>
 
-
-    <View style= {styles.card}>
-    <Text style = {styles.titulo}>SALVE</Text>
-      <Text>Isso é um parágrafo</Text>
-    </View>
-
-    <View style= {styles.card}>
-    <Text style = {styles.titulo}>SALVE</Text>
-      <Text>Isso é um parágrafo</Text>
-    </View>
-
-
-    </ScrollView>
-  );
+        </ScrollViwe>
+    );
 }
 
 const styles = StyleSheet.create({
