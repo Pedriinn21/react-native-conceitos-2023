@@ -1,22 +1,22 @@
 import React from 'react'
-import { Button } from 'react-native'
+import { Button, Text } from 'react-native'
 
 const Botoes = () => {
-    return (
-        <>
-            <Button
-                titile="Learn More"
-                color="#841584"
-                accessibilityLabel='Pedro'
+  return (
+    <>
+    <Button
+  title="Learn More"
+  color="#841584"
+  accessibilityLabel="Learn more about this purple button"/>
 
-Button/>
+<Button
+  title="Learn More"
+  color="red"
+  accessibilityLabel="Learn more about this purple button"/>
 
-                title="Pedro"
-                color="Red"
-                accessibilityLabel="Pedro"
 
     </>
-    )
+  )
 }
 
 export default Botoes

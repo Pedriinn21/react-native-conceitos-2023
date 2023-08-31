@@ -1,26 +1,42 @@
 import React from 'react'
-
-const Pagina2 = () => {
-    const LeftContent = props => <ActivityIndicatorBase.Icon {...props} icon='folder' />
-  return (
-    <>
-    <Card>
-<Card.Title title="Card Title" sutitle="Card Subtitle" left={LeftContent} />
-<Card.Content>
-    <Text variant="titleLarge">Card title</Text>
-    <Text variant="bodyMedium"></Text>
-</Card.Content>
-<Card.Cover source={{ uri '' }} />
-<Card.Actions>
-<Button>Cancel</Button>
-<Button>Ok</Button>
-</Card.Actions>
+import { Avatar, Button, Card, Text } from 'react-native-paper'
 
 
-    </Card>
-    
-    </>
-  )
+const Pagina2 = (navigation) => {
+
+    const LeftContent = props => <Avatar.Icon {...props} icon="folder" />
+    return (
+        <>
+        <Button title='Pg1' onPress={()=>navigation.navigate('Pg1')} />
+        <Button title='Pagina 3' onPress={()=>navigation.navigate('Pagina3')} />
+
+
+            <Card style={{ marginBottom: 20 }}>
+            <Card.Cover source={{ uri: 'https://picsum.photos/700' }} />
+                <Card.Content>
+                    <Text variant="titleLarge">Card title</Text>
+                    <Text variant="bodyMedium">Card content</Text>
+                </Card.Content>
+                <Card.Actions>
+                    <Button>Cancel</Button>
+                    <Button>Ok</Button>
+                </Card.Actions>
+            </Card>
+
+            <Card style={{ marginBottom: 20 }}>
+                <Card.Title title="Card Title" subtitle="Card Subtitle" left={LeftContent} />
+                <Card.Content>
+                    <Text variant="titleLarge">Card title</Text>
+                    <Text variant="bodyMedium">Card content</Text>
+                </Card.Content>
+                <Card.Cover source={{ uri: 'https://picsum.photos/700' }} />
+                <Card.Actions>
+                    <Button>Cancel</Button>
+                    <Button>Ok</Button>
+                </Card.Actions>
+            </Card>
+        </>
+    )
 }
 
 export default Pagina2
